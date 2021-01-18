@@ -1,6 +1,6 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.1'
-	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id("org.springframework.boot") version "2.4.1"
+	id("io.spring.dependency-management") version "1.0.10.RELEASE"
 	id 'java'
 }
 
@@ -13,13 +13,19 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile 'org.springframework.boot:spring-boot-starter-web:2.4.1'
+	compile 'org.springframework.boot:spring-boot-starter-test:2.4.1'
+
 	// Feign jar
-	compile 'org.springframework.cloud:spring-cloud-starter-feign:1.2.6.RELEASE'
-	compile "com.netflix.hystrix:hystrix-javanica:1.5.10"
+	compile 'org.springframework.cloud:spring-cloud-starter-feign:1.4.6.RELEASE'
+	compile 'com.netflix.hystrix:hystrix-javanica:1.5.18'
+	compile 'org.springframework.boot:spring-boot-starter-actuator:2.4.1'
 }
 
 test {
 	useJUnitPlatform()
 }
+
+
+
+
